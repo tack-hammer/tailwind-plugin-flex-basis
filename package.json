@@ -1,0 +1,58 @@
+{
+  "name": "@tkh/tailwind-plugin-flex-basis",
+  "description": "Tailwindcss plugin for flex-basis css rules",
+  "keywords": [
+    "flex-basis",
+    "flex",
+    "flexbox",
+    "plugin",
+    "tailwind css",
+    "tailwind",
+    "tailwindcss-plugin",
+    "tailwindcss"
+  ],
+  "version": "1.3.0",
+  "license": "MIT",
+  "main": "flex-basis.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "lint-staged": "^9.2.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.css": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false
+  }
+}
